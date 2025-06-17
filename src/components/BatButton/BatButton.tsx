@@ -9,21 +9,17 @@ import { BatButtonStyles } from './BatButtonStyles';
 
 type StateType = {
   password: string;
-  setPassword: (pass: string) => void;
 };
 
 const state: StateType = {
   password: '',
-  setPassword(pass: string) {
-    this.password = pass;
-  },
 };
 
 makeAutoObservable(state);
 
 export const BatButton = observer(() => {
   const handlePressGenerate = () => {
-    state.setPassword(generatePass());
+    state.password = generatePass();
   };
 
   const handleCopyButton = async () => {
