@@ -52,7 +52,7 @@ O estado do aplicativo é controlado usando **MobX**, tornando a atualização d
 1. **Clone o repositório**
 
 ```bash
-git clone https://github.com/GLemes25/React-Native-Bat-Password-Generator.git
+git clone https://github.com/GLemes25/React-Native-Bat-Password-Generator.git bat-pass-generator
 cd bat-pass-generator
 ```
 
@@ -94,13 +94,13 @@ Toda vez que o usuário clica em **"Generate"**, o MobX atualiza o estado da sen
 Exemplo básico do state:
 
 ```ts
-import { makeAutoObservable } from 'mobx';
+import { makeAutoObservable } from "mobx";
 
 type StateType = {
   password: string;
 };
 const state: StateType = {
-  password: '',
+  password: "",
 };
 
 makeAutoObservable(state);
